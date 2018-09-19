@@ -53,6 +53,9 @@ app.get('/',( req,res)=>
         currentYear: new Date().getFullYear()
     });
 });
+
+
+
     app.get('/about',(req,res)=>
     {
         res.render('about.hbs',
@@ -62,6 +65,10 @@ app.get('/',( req,res)=>
         })
     });
 
+
+
+
+
     app.get('/bad',(req,res)=>
     {
         res.send({
@@ -69,7 +76,21 @@ app.get('/',( req,res)=>
         });
         
     });
+
+
+
+
  
+   app.get('/projects',(req,res)=>
+   {
+        res.render('projects.hbs',
+        {
+            pageTitle: 'My Project'
+        });
+   });
+
+
+
 
 app.listen(port,()=>
 {
